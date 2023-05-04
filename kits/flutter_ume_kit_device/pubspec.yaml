@@ -10,7 +10,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_ume: ">=1.0.0 <2.0.0"
+  # flutter_ume: ">=1.0.0 <2.0.0"
+  flutter_ume: 
+    git:
+      url: https://github.com/munnadroid/flutter_ume
+      ref: feat/upgrade-dio-5.1.1 
+      
   system_info: ^1.0.1
   device_info: ^2.0.2
   platform: ^3.0.0

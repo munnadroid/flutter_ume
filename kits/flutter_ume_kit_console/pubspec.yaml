@@ -13,7 +13,11 @@ dependencies:
   tuple: ^2.0.0
   share: ^2.0.4
   shared_preferences: ^2.0.6
-  flutter_ume: ">=1.0.0 <2.0.0"
+  # flutter_ume: ">=1.0.0 <2.0.0"
+  flutter_ume: 
+    git:
+      url: https://github.com/munnadroid/flutter_ume
+      ref: feat/upgrade-dio-5.1.1 
 
 dev_dependencies:
   flutter_test:
