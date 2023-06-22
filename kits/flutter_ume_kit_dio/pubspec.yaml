@@ -15,7 +15,7 @@ dependencies:
     git:
       url: https://github.com/munnadroid/flutter_ume
       ref: feat/upgrade-dio-5.1.1 
-  
+  share_plus: ^4.5.3
 
   dio: ">=4.0.0 <6.0.0"
 

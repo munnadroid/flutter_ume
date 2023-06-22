@@ -4,9 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_ume/flutter_ume.dart';
 
 class CustomLog implements Pluggable {
-
   @override
-  Widget? buildWidget(BuildContext? context) => _buildLogPanel(context);
+  Widget buildWidget(BuildContext context) => _buildLogPanel(context);
 
   @override
   ImageProvider<Object> get iconImageProvider => MemoryImage(base64Decode(
@@ -31,7 +30,7 @@ class CustomLog implements Pluggable {
     print(info);
   }
 
-  Widget _buildLogPanel(BuildContext? context) {
+  Widget _buildLogPanel(BuildContext context) {
     if (context == null) return Container();
     return Align(
       alignment: Alignment.bottomCenter,
@@ -43,7 +42,7 @@ class CustomLog implements Pluggable {
 }
 
 class LogViewerPage extends StatefulWidget {
-  LogViewerPage({Key? key}) : super(key: key);
+  LogViewerPage({Key key}) : super(key: key);
 
   @override
   _LogViewerPageState createState() => _LogViewerPageState();
