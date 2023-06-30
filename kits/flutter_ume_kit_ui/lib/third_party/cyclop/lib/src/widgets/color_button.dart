@@ -1,12 +1,9 @@
 import 'dart:math';
 import 'dart:ui';
 
-import 'package:flutter/foundation.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-
 import 'package:flutter_ume_kit_ui/util/binding_ambiguate.dart';
+
 import '../theme.dart';
 import '../utils.dart';
 import 'color_picker.dart';
@@ -112,7 +109,7 @@ class _ColorButtonState extends State<ColorButton> with WidgetsBindingObserver {
 
     pickerOverlay = _buildPickerOverlay(offset, rootContext);
 
-    Overlay.of(rootContext)?.insert(pickerOverlay!);
+    Overlay.of(rootContext).insert(pickerOverlay!);
 
     return Future.value(widget.color);
   }

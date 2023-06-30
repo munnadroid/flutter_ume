@@ -1,10 +1,13 @@
 import 'dart:async';
 import 'dart:math';
+
 import 'package:flutter/material.dart';
-import 'package:flutter_ume_kit_ui/components/hit_test.dart';
 import 'package:flutter_ume/flutter_ume.dart';
+import 'package:flutter_ume_kit_ui/components/hit_test.dart';
+import 'package:flutter_ume_kit_ui/components/widget_detail_inspector/search_bar.dart'
+    as searchBar;
 import 'package:flutter_ume_kit_ui/util/binding_ambiguate.dart';
-import 'search_bar.dart';
+
 import 'icon.dart' as icon;
 
 class WidgetDetailInspector extends StatelessWidget implements Pluggable {
@@ -111,9 +114,7 @@ class _DetailModel {
 }
 
 class _InfoPage extends StatefulWidget {
-  const _InfoPage({Key? key, required this.elements})
-      : assert(elements != null),
-        super(key: key);
+  const _InfoPage({Key? key, required this.elements}) : super(key: key);
 
   final List<Element> elements;
 
@@ -199,7 +200,7 @@ class __InfoPageState extends State<_InfoPage> {
               Padding(
                 padding: const EdgeInsets.only(
                     left: 12, right: 12, top: 10, bottom: 10),
-                child: SearchBar(
+                child: searchBar.SearchBar(
                     placeHolder: '请输入要搜索的widget', onChangeHandle: _textChange),
               ),
               Expanded(
@@ -242,9 +243,7 @@ class __InfoPageState extends State<_InfoPage> {
 }
 
 class _DetailContent extends StatelessWidget {
-  const _DetailContent({Key? key, required this.element})
-      : assert(element != null),
-        super(key: key);
+  const _DetailContent({Key? key, required this.element}) : super(key: key);
 
   final Element element;
 
