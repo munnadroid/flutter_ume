@@ -13,6 +13,9 @@ dependencies:
   quiver: ^3.2.1
   basics: ^0.10.0
 
+  flutter_ume_kit_ui: 
+    path: ../../../../flutter_ume_kit_ui
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
