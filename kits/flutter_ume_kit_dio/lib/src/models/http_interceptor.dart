@@ -36,7 +36,8 @@ class UMEDioInterceptor extends Interceptor {
   @override
   void onError(err, ErrorInterceptorHandler handler) {
     // Create an empty response with the [RequestOptions] for delivery.
-    final response = Response<dynamic>(requestOptions: err.requestOptions);
+    final response =
+        err.response ?? Response<dynamic>(requestOptions: err.requestOptions);
     response.requestOptions.extra[DIO_EXTRA_END_TIME] = _timestamp;
     InspectorInstance.httpContainer.addRequest(response);
     handler.next(err);
