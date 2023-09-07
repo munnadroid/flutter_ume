@@ -1,11 +1,10 @@
 import 'dart:async';
 import 'dart:math';
 
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide SearchBar;
 import 'package:flutter_ume/flutter_ume.dart';
 import 'package:flutter_ume_kit_ui/components/hit_test.dart';
-import 'package:flutter_ume_kit_ui/components/widget_detail_inspector/search_bar.dart'
-    as searchBar;
+import 'package:flutter_ume_kit_ui/components/widget_detail_inspector/search_bar.dart';
 import 'package:flutter_ume_kit_ui/util/binding_ambiguate.dart';
 
 import 'icon.dart' as icon;
@@ -200,7 +199,7 @@ class __InfoPageState extends State<_InfoPage> {
               Padding(
                 padding: const EdgeInsets.only(
                     left: 12, right: 12, top: 10, bottom: 10),
-                child: searchBar.SearchBar(
+                child: SearchBar(
                     placeHolder: '请输入要搜索的widget', onChangeHandle: _textChange),
               ),
               Expanded(
